@@ -14,7 +14,7 @@ class MAX6675demux {
   double readCelsius(int8_t index);
   double readFahrenheit(int8_t index);
   // For compatibility with older versions:
-  double readFarenheit(int8_t index) { return readFahrenheit(int8_t index); }
+  double readFarenheit(int8_t index) { return readFahrenheit(index); };
  private:
   int8_t sclk, miso, en;
   int8_t* demux_pins;

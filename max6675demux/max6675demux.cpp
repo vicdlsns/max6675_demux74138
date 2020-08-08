@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include "max6675demux.h"
 
-MAX6675demux::MAX6675demux(int8_t SCLK, int8_t* DEMUX_PINS, int8_t EN, int8_t MISO, uint8_t ACTIVE_EN=LOW) {
+MAX6675demux::MAX6675demux(int8_t SCLK, int8_t* DEMUX_PINS, int8_t EN, int8_t MISO, uint8_t ACTIVE_EN) {
   sclk = SCLK;
   en = EN;
   miso = MISO;
@@ -26,7 +26,7 @@ MAX6675demux::MAX6675demux(int8_t SCLK, int8_t* DEMUX_PINS, int8_t EN, int8_t MI
   int len=sizeof(demux_pins)/sizeof(int8_t);
   for (int i=0;i<len;i++)
   {
-	  pin=demux_pins[i];
+	  unsigned int pin=demux_pins[i];
 	  pinMode(pin, OUTPUT); //set all pins to output
 	  digitalWrite(pin, LOW); //set all pins to low
   }
