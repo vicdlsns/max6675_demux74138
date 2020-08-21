@@ -2,7 +2,7 @@
 
 This Arduino lib was made in order to use more than one MAX6675-based Thermocouple in combination with a 74138 Demultiplexer IC, allowing up to 8 thermocouples to be read with less than 8 selection pins.
 
-# Connections
+# Connections:
     -All Thermocouple SCLK pins are connected to the same Arduino SPI clock pin;
     -All Thermocouple SO pins are connected to the same Arduino SPI MISO pin;
     -Each Thermocouple CS pin is connected to a different output of the 74138 Demux (¬O0 to ¬O7);
