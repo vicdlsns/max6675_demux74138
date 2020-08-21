@@ -23,5 +23,6 @@ class MAX6675demux {
   
   uint8_t spiread(void);
   
-  void select(int8_t index);
+  bool isValidIndex(int8_t index);
+  bool select(int8_t index);
 };
