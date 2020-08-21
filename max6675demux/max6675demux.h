@@ -18,10 +18,11 @@ class MAX6675demux {
  private:
   int8_t sclk, miso, en;
   int8_t* demux_pins;
-  uint8_t active_en, inactive_en;
+  uint8_t active_en, inactive_en, len_demux_pins;
   
   
   uint8_t spiread(void);
   
-  void select(int8_t index);
+  bool isValidIndex(int8_t index);
+  bool select(int8_t index);
 };
