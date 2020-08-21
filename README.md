@@ -30,3 +30,6 @@ This Arduino lib was made in order to use more than one MAX6675-based Thermocoup
     double readFarenheit(int8_t index)
         -Same as readFahrenheit(int8_t index).
 
+# Issues:
+    -Selection does not work:
+        Check if the index is valid. It has to stay between 0 and 2 to the power of the length of DEMUX_PINS.
