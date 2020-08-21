@@ -36,7 +36,7 @@ MAX6675demux::MAX6675demux(int8_t SCLK, int8_t* DEMUX_PINS, int8_t EN, int8_t MI
 
 int8_t MAX6675demux::select(int8_t index)
 {	
-	if(index>=2**len_demux_pins) //does not change selection if index is not valid
+	if(index>=2**len_demux_pins || index<0) //does not change selection if index is not valid
 	{
 		int8_t num = index;
 		int8_t i = 0;
